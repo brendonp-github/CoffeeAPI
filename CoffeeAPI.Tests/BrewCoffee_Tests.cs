@@ -11,7 +11,7 @@ namespace CoffeeAPI.Tests
         public async Task NormalRun()
         {
             var temperature = await BrewCoffeeController.GetTemperature();
-            using (var context = new DateTimeProviderContext(DateTime.Now))
+            using (var context = new DateTimeProviderContext(DateTime.Now)) 
             {
                 var controller = new BrewCoffeeController();
                 for (int iterationNum = 1; iterationNum <= 10; iterationNum++)
